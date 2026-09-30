@@ -3,18 +3,17 @@
 let country = 'Moldova';
 let continent = 'Europe';
 let population = 2.37;
-
-console.log(country);
-console.log(continent);
-console.log(population);
+console.log({country, continent, population});
 
 //Data Types
 let isIsland = false;
 let language;
-console.log(typeof isIsland);
-console.log(typeof population);
-console.log(typeof country);
-console.log(typeof language);
+console.log({
+    isIsland: typeof isIsland,
+    population: typeof population,
+    country: typeof country,
+    language: typeof language
+});
 
 //Basic Operation
 let halfPopulation = population / 2;
@@ -22,11 +21,11 @@ console.log(
     `Each half of ${country} would have ${halfPopulation} million people.`,
 );
 
-let incrementPopulation = ++population;
-console.log(incrementPopulation);
+population++;
+console.log(population);
 
-let decrementPopulation = --population;
-console.log(decrementPopulation);
+population--;
+console.log(population)
 
 if (population > 6) {
     console.log(`${country} has more people than Finland`);
@@ -45,14 +44,14 @@ console.log(description);
 
 //Equality Operators: == vs. ===
 let numNeighbours = prompt(
-  'How many neighbour countries does your country have?',
+    'How many neighbour countries does your country have?',
 );
 if (numNeighbours === 1) {
-  console.log('Only 1 border!');
+    console.log('Only 1 border!');
 } else if (numNeighbours > 1) {
-  console.log('More than 1 border!');
+    console.log('More than 1 border!');
 } else {
-  console.log('Noborders');
+    console.log('Noborders');
 }
 
 numNeighbours = Number(numNeighbours);
